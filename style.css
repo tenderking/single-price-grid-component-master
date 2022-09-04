@@ -1,6 +1,6 @@
 :root {
     --clr-primary: hsl(179, 62%, 43%);
-    --clr-primary-60: hsl(179, 62%, 53%);
+    --clr-primary-60: hsl(179, 62%, 48%);
     --clr-secondary: hsl(71, 73%, 54%);
     --clr-neutral: hsl(204, 43%, 93%);
     --clr-neutral-40: hsla(203, 44%, 93%, 0.50);
@@ -29,7 +29,7 @@ main {
 }
 h1 {
     color: var(--clr-primary);
-    font-size: inherit;
+    font-size: 2rem;
     padding-bottom: 1em;
 }
 h2 {
@@ -38,7 +38,7 @@ h2 {
     line-height: 2;
     padding-bottom: 1em;
 }
-h3 {
+.heading{
     color: var(--clr-secondary);
     font-size: inherit;
     line-height: 1.5;
