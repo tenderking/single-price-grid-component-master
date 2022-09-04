@@ -1,0 +1,127 @@
+:root {
+    --clr-primary: hsl(179, 62%, 43%);
+    --clr-primary-60: hsl(179, 62%, 53%);
+    --clr-secondary: hsl(71, 73%, 54%);
+    --clr-neutral: hsl(204, 43%, 93%);
+    --clr-neutral-40: hsla(203, 44%, 93%, 0.50);
+    --clr-neutral--blue: hsl(218, 22%, 67%);
+    --clr-white: white;
+    --shadow:box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-neutral);
+
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    height: 100vh;
+}
+main {
+    border-radius: 10px;
+    box-shadow:var(--shadow);
+    overflow: hidden;
+    margin-inline: 2em;
+}
+h1 {
+    color: var(--clr-primary);
+    font-size: inherit;
+    padding-bottom: 1em;
+}
+h2 {
+    color: var(--clr-neutral);
+    font-size: inherit;
+    line-height: 2;
+    padding-bottom: 1em;
+}
+h3 {
+    color: var(--clr-secondary);
+    font-size: inherit;
+    line-height: 1.5;
+    padding-bottom: 1em;
+}
+p {
+    color: var(--clr-neutral);
+    max-width: 60ch;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 0.5rem;
+}
+.per-month {
+    padding: 0;
+    color: var(--clr-neutral-40);
+}
+span {
+    font-size: 2em;
+    color: var(--clr-white);
+    font-weight: 700;
+}
+.container {
+    padding: 1em;
+}
+
+.card__join {
+    background-color: var(--clr-white);
+}
+.card__subscription {
+    background-color: var(--clr-primary);
+}
+.card__subscription > * {
+    color: white;
+}
+.card__motivation {
+    background-color: var(--clr-primary-60);
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+    color: var(--clr-neutral);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+.card__join-text {
+    color: var(--clr-neutral--blue);
+}
+button {
+    color: white;
+    background-color: var(--clr-secondary);
+    border: none;
+    width: 100%;
+    padding-block: 0.5em;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    font-weight: 700;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding: 2em;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card__join {
+        grid-column: 1 / span 2;
+        height: fit-content;
+    }
+    .card__subscription {
+        grid-column: 1 / span 1;
+    }
+    .card__motivation {
+        grid-column: 2 / span 1;
+    }
+}
